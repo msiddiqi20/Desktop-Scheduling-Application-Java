@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.MainMenuController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" spacing="10.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" prefHeight="132.5" prefWidth="860.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="132.5" prefWidth="860.0">
+                     <children>
+                        <Label text="Main Menu">
+                           <font>
+                              <Font size="60.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="198.75" prefWidth="860.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="860.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#gotoCustomerRecords" prefHeight="30.0" prefWidth="150.0" text="Customer Records">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="383.0" layoutY="62.0" mnemonicParsing="false" onAction="#gotoAppointments" prefHeight="30.0" prefWidth="150.0" text="Appointments">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="383.0" layoutY="82.0" mnemonicParsing="false" onAction="#gotoReports" prefHeight="30.0" prefWidth="150.0" text="Reports">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="120.0" prefWidth="860.0" spacing="5.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="860.0">
+                     <children>
+                        <Label text="Notifications:" />
+                        <Label fx:id="notificationsLabel" text="Label" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="45.0" prefWidth="860.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#logOut" prefHeight="30.0" prefWidth="86.25" text="Log Out">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

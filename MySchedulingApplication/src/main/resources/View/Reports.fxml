@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.ReportsController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" spacing="10.0">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="860.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="132.5" prefWidth="860.0">
+                     <children>
+                        <Label text="Reports">
+                           <font>
+                              <Font size="60.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label text="Contact:">
+                     <HBox.margin>
+                        <Insets bottom="3.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="contactComboBox" onAction="#contactSelected" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="150.0" prefWidth="960.0" spacing="10.0">
+               <children>
+                  <TableView fx:id="contactScheduleTV" prefHeight="374.25" prefWidth="960.0">
+                    <columns>
+                      <TableColumn fx:id="appointmentIDCol" prefWidth="106.0" text="Appointment ID" />
+                      <TableColumn fx:id="titleCol" prefWidth="106.0" text="Title" />
+                        <TableColumn fx:id="descriptionCol" prefWidth="106.0" text="Description" />
+                        <TableColumn fx:id="locationCol" prefWidth="106.0" text="Location" />
+                        <TableColumn fx:id="typeCol" prefWidth="106.0" text="Type" />
+                        <TableColumn fx:id="startCol" prefWidth="109.0" text="Start" />
+                        <TableColumn fx:id="endCol" prefWidth="109.0" text="End" />
+                        <TableColumn fx:id="customerIDCol" prefWidth="106.0" text="Customer ID" />
+                        <TableColumn fx:id="userIDCol" prefWidth="106.0" text="User ID" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox prefHeight="250.0" prefWidth="960.0" spacing="20.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="480.0" spacing="5.0">
+                     <children>
+                        <TableView fx:id="reportOneTV" prefHeight="225.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="leftOne" prefWidth="156.0" text="C1" />
+                            <TableColumn fx:id="leftTwo" prefWidth="157.0" text="C2" />
+                              <TableColumn fx:id="leftThree" prefWidth="157.0" text="C2" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <RadioButton fx:id="monthRB" mnemonicParsing="false" onAction="#selectedMonth" text="Month">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="reportOneTG" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <ComboBox fx:id="multiComboBox" onAction="#comboBoxSelected" prefWidth="150.0" />
+                              <RadioButton fx:id="typeRB" mnemonicParsing="false" onAction="#typeSelected" text="Type" toggleGroup="$reportOneTG">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="225.0" prefWidth="480.0" spacing="5.0">
+                     <children>
+                        <TableView fx:id="reportTwoTV" prefHeight="225.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="divisionCol" prefWidth="235.0" text="Division" />
+                            <TableColumn fx:id="totalCustomersCol" prefWidth="235.0" text="Total Customers" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="Country:">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="countryComboBox" onAction="#countrySelected" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="30.0" prefWidth="960.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#backToMainMenu" prefHeight="30.0" prefWidth="57.5" text="Back">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
